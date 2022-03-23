@@ -1,6 +1,23 @@
 spring:
   datasource:
-    url: jdbc:h2:~/h2.db
+    url: jdbc:h2:tcp://localhost/~/batch.db #h2/bin h2.sh 로 먼저 database 를 생성해야 한다.
     username: sa
     password: 1234
     driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: true
+      names: ${job.name:NONE}
+logging:
+  level:
+    root: info
+    #com.example.springbatchtutorial: debug
+  file:
+    path: ~\my-pjt\logs

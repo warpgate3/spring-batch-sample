@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+/d:/
+/d:\\my-pjt\\logs/
+/src/main/java/com/example/sprinbbatchtutorial/JavaClosure.java
